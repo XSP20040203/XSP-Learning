@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>代码笔记管理</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💻 代码笔记</h1>
+            <input type="text" id="search" placeholder="搜索笔记..." />
+        </header>
+
+        <div class="main">
+            <aside class="sidebar">
+                <button class="add-note" onclick="addNote()">新增笔记</button>
+                <ul id="note-list"></ul>
+            </aside>
+
+            <main class="note-editor">
+                <div class="note-content">
+                    <h2 contenteditable="true" id="edit-title">新笔记</h2>
+                    <textarea id="edit-content" placeholder="输入代码或说明..."></textarea>
+                    <div class="actions">
+                        <button onclick="saveNote()">保存</button>
+                        <button class="delete" onclick="deleteNote()">删除</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
